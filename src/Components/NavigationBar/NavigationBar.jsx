@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './NavigationBarStyle.scss'
-import ApiMap from "./ApiMap";
+import ApiMap from "../ApiMap/ApiMap";
 
 
 const NavigationBar = () => {
@@ -10,6 +10,8 @@ const NavigationBar = () => {
 	const [ objects, setObjects ] = useState([]);                  // Массив с координатами всех объектов карты
 	const [ count, setCount ] = useState(0);                     // счетчик кол-во маркеров попавших в полигон
 	const polygonState = useRef(null);                       // Состояние полигона для работы с ним через АПИ
+	
+	
 	
 	const markerActive = () => {
 		setMarker(!marker)
@@ -41,6 +43,8 @@ const NavigationBar = () => {
 					marker={ marker }
 					setObjects={ setObjects }
 					polygonState={ polygonState }
+					objects={objects}
+					setCount={setCount}
 				/>
 			</div>
 			<div className="bar__block-nav_group">

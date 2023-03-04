@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.scss'
-import NavigationBar from "./Components/NavigationBar";
+import NavigationBar from "./Components/NavigationBar/NavigationBar";
 import { YMaps } from "react-yandex-maps";
 
 function App() {

@@ -13,13 +13,11 @@ export default function ApiMap ({ peaks, setPeaks, polygon, marker, setObjects, 
 	useEffect(() => {
 		if ( ymaps && map.current ) {
 			const objs = ymaps.geoQuery(mark).addToMap(map.current);
-			console.log(objs)
 			setObjects(objs);
 		}
 	}, [ ymaps, map, mark, peaks, marker, polygon ]);
 	
-	
-	//Ф-н предназначенная для определенния координат на карте
+	//ф-н для поиска координат по нажатию на точку карты
 	const addMark = e => {
 		let coords = e.get('coords');
 		let obj = {
