@@ -22,10 +22,13 @@ const NavigationBar = () => {
 		if ( polygon ) {
 			//создаем объект содержащий информацию о результатах поиска в зоне полигона
 			const objectsInsidePolygon = objects.searchInside(polygonState.current);
+			//добавляем цвет меткам попавшим в полигон
+			objectsInsidePolygon.setOptions("preset", "islands#redIcon");
 			//Добавляем значение результата в наш счетчик
 			setCount(objectsInsidePolygon._objects.length)
 			
 		} else if ( !polygon ) {
+			objects.setOptions("preset", "islands#blueIcon");
 			setPeaksFigure([])
 			setCount(0)
 		}
