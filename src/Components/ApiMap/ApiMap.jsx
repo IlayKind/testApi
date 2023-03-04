@@ -15,7 +15,7 @@ export default function ApiMap ({ peaks, setPeaks, polygon, marker, setObjects, 
 			const objs = ymaps.geoQuery(mark).addToMap(map.current);
 			setObjects(objs);
 		}
-	}, [ ymaps, map, mark, peaks, marker, polygon ]);
+	}, [ ymaps, map, mark ]);
 	
 	//ф-н для поиска координат по нажатию на точку карты
 	const addMark = e => {
