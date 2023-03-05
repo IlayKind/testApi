@@ -59,6 +59,10 @@ const NavigationBar = () => {
 				</button>
 				<h3 className="bar__block-info_dot">
 					точек в контуре: { count }
+                                        <br/>
+					{
+					polygon ? <p>Редактирование не завершено</p> : ""
+					}
 				</h3>
 			</div>
 		</div>
