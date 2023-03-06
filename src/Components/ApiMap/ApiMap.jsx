@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Map, Polygon, Placemark } from "react-yandex-maps";
+import { Map, Polygon, Placemark } from "@pbe/react-yandex-maps";
 
 
 export default function ApiMap ({ peaks, setPeaks, polygon, marker, setObjects, polygonState }) {
